@@ -1,0 +1,24 @@
+<!-- 私有云环境 H5埋点测试文件 -->
+<html>
+<head>
+<title>H5埋点测试</title>
+</head>
+<body style="background-color:#9d9d9d">
+<p style="text-align: center;margin-top: 60px;font-size: 35px;font-color: #ffffff"><a onclick="trick2()" href=#>测试h5埋点328</a></p>
+</body>
+<script>
+function trick2(){if(_cl_tracker){_cl_tracker.track("click_link_in_app","测试h5埋点328","id_1648465874277");}}
+</script>
+<script src="https://cbe.convertwork.cn/cbe/collect?tid=2435697812234123488&at=0&h=web"></script>
+  <script> 
+  clab_tracker.ready(function(){
+    //非微信环境打开
+     this.push({pageId:"5e569e0c48f94e8fa11085152126f04f",pageType:"h5"});
+     this.track("open_app",{targetId:"5e569e0c48f94e8fa11085152126f04f"});
+    //微信环境打开
+    this.push({pageId:"5e569e0c48f94e8fa11085152126f04f", identityType: "wechat", identityValue: "6d9963b8-93c4-11ec-bf07-00163e163589-1",pageType:"h5"});
+    this.track("open_app",{targetId:"5e569e0c48f94e8fa11085152126f04f"});
+  });
+ </script>  
+   
+</html>
