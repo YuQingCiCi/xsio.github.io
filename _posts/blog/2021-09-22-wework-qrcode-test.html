@@ -55,7 +55,7 @@
         <h4 style="text-align: center">表单提交</h4>
         <form
           data-cl-attached="false"
-          data-cl-id="56d63170ed6c4ff9bcd2f584f6d50acd"
+          data-cl-id="3f49d66cd8614df69e392443050df721"
         >
           <div class="form-group">
             <label>姓名</label>
@@ -107,7 +107,7 @@
         e.preventDefault();
         var data = $(this).serialize();
         $.get(
-          "https://host-test.huiju.cool/formdata/get/56d63170ed6c4ff9bcd2f584f6d50acd"
+          "https://host-test.huiju.cool/formdata/get/3f49d66cd8614df69e392443050df721"
         ).done(function (res) {
           var utmaVal = document.getElementsByName("cl_context")[0].value;
           var reqData =
@@ -118,7 +118,7 @@
             res.token;
           console.log("reqData is", reqData);
           $.post(
-            "https://host-test.huiju.cool/form/56d63170ed6c4ff9bcd2f584f6d50acd",
+            "https://host-test.huiju.cool/form/3f49d66cd8614df69e392443050df721",
             reqData,
             function (data, status) {
               alert("提交成功");
@@ -170,20 +170,19 @@
             oReq.send();
         }
         g.setAttribute("style", "width: 100%"),
-          g.setAttribute("src", o),
           document.getElementById(b).appendChild(g),
           "undefined" != typeof _cl_tracker && _cl_tracker.ready
             ? _cl_tracker.ready(d)
             : setTimeout(d, 3e3);
       })(
         "//a-test.huiju.cool/e/extwechatcorp/pgw/livecode/binding",
-        "4cc4",
-        "//wework.qpic.cn/wwpic/420094_3UhQbTnQT_aTB-h_1631947153/0",
+        "4cde",
+        "//wework.qpic.cn/wwpic/810562_BDMwDwTKS6aLAOC_1646806672/0",
         "_cl_wework_qrcode"
       );
     </script>
   </body>
-  <script src="//cbe-test.huiju.cool/cbe/collect?tid=393279833&at=0&h=web"></script>
+  <script src="//cbe-test.huiju.cool/cbe/collect?tid=66198905&at=0&h=web"></script>
   <script>
     clab_tracker.ready(function () {
       this.push({ pageType: "web" });
