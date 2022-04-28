@@ -103,6 +103,17 @@
     </div>
 
     <script>
+      function getCookie(j) {
+        for (
+          var h = j + "=", g = document.cookie.split(";"), k = 0;
+          k < g.length;
+          k++
+        ) {
+          for (var l = g[k]; " " == l.charAt(0); ) l = l.substring(1);
+          if (0 == l.indexOf(h)) return l.substring(h.length, l.length);
+        }
+        return "";
+      }
       $("form").on("submit", function (e) {
         e.preventDefault();
         var data = $(this).serialize();
@@ -116,10 +127,22 @@
             utmaVal +
             "&cltoken=" +
             res.token;
+
+          var reqData2 = {
+            name: $('[name="name"]').val(),
+            mobile: $('[name="mobile"]').val(),
+            email: $('[name="email"]').val(),
+            company: $('[name="company"]').val(),
+            title: $('[name="title"]').val(),
+            cltoken: res.token,
+            utma: getCookie("c__utma"),
+            utmb: getCookie("c__utmb"),
+          };
           console.log("reqData is", reqData);
+          console.log("reqData2 is", reqData2);
           $.post(
             "https://host-test.huiju.cool/form/3f49d66cd8614df69e392443050df721",
-            reqData,
+            reqData2,
             function (data, status) {
               alert("提交成功");
             }
@@ -170,6 +193,7 @@
             oReq.send();
         }
         g.setAttribute("style", "width: 100%"),
+          g.setAttribute("src", o),
           document.getElementById(b).appendChild(g),
           "undefined" != typeof _cl_tracker && _cl_tracker.ready
             ? _cl_tracker.ready(d)
@@ -177,7 +201,7 @@
       })(
         "//a-test.huiju.cool/e/extwechatcorp/pgw/livecode/binding",
         "4cde",
-        "//wework.qpic.cn/wwpic/810562_BDMwDwTKS6aLAOC_1646806672/0",
+        "https://thumbs.gfycat.com/ColossalMeekCygnet-size_restricted.gif",
         "_cl_wework_qrcode"
       );
     </script>
